@@ -339,13 +339,23 @@ The Streamlit application should open in your browser.
 \*\*Note:\*\* Model checkpoints and the original dataset are not included in this repository. The application may require trained model weights and the corresponding dataset or configuration files before all analysis features can run.
 
 
-## 🖥️ Application Preview
+## 🖥️ Application Screenshots
 
-The project includes an interactive Streamlit dashboard with a modern interface for document forensic analysis.
+### 1. Application Dashboard
 
 ![Application Dashboard](results/examples/app-dashboard.png)
 
-Users can upload PDF or image documents for AI-assisted forensic examination, including OCR extraction, authenticity assessment and suspicious-region localization.
+### 2. Model Evidence and OCR Analysis
+
+Displays visual model predictions, multimodal analysis, U-Net localization evidence and OCR extraction results.
+
+![Model Evidence](results/examples/model-evidence.png)
+
+### 3. Forensic Analysis and Tampering Localization
+
+Shows the document verdict, combined risk assessment, highlighted suspicious regions and predicted tampering mask.
+
+![Forensic Analysis](results/examples/forensic-analysis.png)
 ## Example Outputs
 
 
