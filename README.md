@@ -100,63 +100,44 @@ These components are evaluated individually and in combination through an ablati
 
 ```text
 
+## 📁 Project Structure
+
+```text
 AI-Document-Forensics-Tampering-Localization/
-
-â”‚
-
-â”œâ”€â”€ app/
-
-â”‚   â””â”€â”€ app.py
-
-â”‚
-
-â”œâ”€â”€ src/
-
-â”‚   â”œâ”€â”€ models/
-
-â”‚   â”‚   â”œâ”€â”€ multimodal\_dataset.py
-
-â”‚   â”‚   â””â”€â”€ multimodal\_model.py
-
-â”‚   â”œâ”€â”€ forensic\_pipeline.py
-
-â”‚   â”œâ”€â”€ inference.py
-
-â”‚   â”œâ”€â”€ localization.py
-
-â”‚   â”œâ”€â”€ localization\_v2.py
-
-â”‚   â”œâ”€â”€ ocr.py
-
-â”‚   â”œâ”€â”€ train.py
-
-â”‚   â”œâ”€â”€ train\_multimodal.py
-
-â”‚   â””â”€â”€ evaluate\_multimodal.py
-
-â”‚
-
-â”œâ”€â”€ results/
-
-â”‚   â”œâ”€â”€ ablation/
-
-â”‚   â”‚   â””â”€â”€ ablation\_results.txt
-
-â”‚   â”œâ”€â”€ evaluation/
-
-â”‚   â”‚   â””â”€â”€ multimodal\_metrics.txt
-
-â”‚   â””â”€â”€ examples/
-
-â”‚
-
-â”œâ”€â”€ requirements.txt
-
-â”œâ”€â”€ .gitignore
-
-â””â”€â”€ README.md
-
-```
+│
+├── app/
+│   └── app.py
+│
+├── src/
+│   ├── models/
+│   │   ├── multimodal_dataset.py
+│   │   └── multimodal_model.py
+│   │
+│   ├── forensic_pipeline.py
+│   ├── inference.py
+│   ├── localization.py
+│   ├── localization_v2.py
+│   ├── ocr.py
+│   ├── train.py
+│   ├── train_multimodal.py
+│   └── evaluate_multimodal.py
+│
+├── results/
+│   ├── ablation/
+│   │   └── ablation_results.txt
+│   │
+│   ├── evaluation/
+│   │   └── multimodal_metrics.txt
+│   │
+│   └── examples/
+│       ├── app-dashboard.png
+│       ├── model-evidence.png
+│       └── forensic-analysis.png
+│
+├── requirements.txt
+├── .gitignore
+├── LICENSE
+└── README.md
 
 
 
