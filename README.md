@@ -339,7 +339,13 @@ The Streamlit application should open in your browser.
 \*\*Note:\*\* Model checkpoints and the original dataset are not included in this repository. The application may require trained model weights and the corresponding dataset or configuration files before all analysis features can run.
 
 
+## 🖥️ Application Preview
 
+The project includes an interactive Streamlit dashboard with a modern interface for document forensic analysis.
+
+![Application Dashboard](results/examples/app-dashboard.png)
+
+Users can upload PDF or image documents for AI-assisted forensic examination, including OCR extraction, authenticity assessment and suspicious-region localization.
 ## Example Outputs
 
 
