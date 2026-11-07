@@ -1,141 +1,415 @@
-# AI-Document-Forensics-Tampering-Localization
-A multimodal deep learning framework for document authenticity classification and tampering localization using ResNet18, U-Net, OCR (Tesseract), and PyTorch.
-# AI-Based Document Forensics and Tampering Localization Using Deep Learning
+﻿# AI-Based Document Forensics and Tampering Localization Using Deep Learning
 
-A multimodal deep learning framework designed to detect document manipulation, classify document authenticity, and localize potentially tampered regions using Computer Vision, OCR, and Deep Learning.
+
+
+An AI-powered document forensics system designed to detect document tampering, classify document authenticity, and localize suspicious regions using deep learning, OCR, and image analysis.
+
+
 
 ## Overview
 
-Digital document manipulation has become increasingly sophisticated, making document authenticity verification an important challenge.
 
-This project explores a deep learning-based approach to identify manipulated documents and localize suspicious regions through a combination of visual feature extraction, image segmentation, and textual analysis.
 
-The framework integrates image classification, pixel-level localization, and OCR-based text extraction.
+Digital documents can be manipulated through image editing, text replacement, and other forms of tampering. This project explores a deep learning-based approach to identifying suspicious modifications in documents.
+
+
+
+The system combines visual feature extraction, OCR-based text analysis, and document layout information to support document authenticity assessment and tampering localization.
+
+
 
 ## Key Features
 
-- Document authenticity classification.
-- Image-based tampering detection.
-- Pixel-level tampering localization.
-- OCR-based text extraction using Tesseract.
-- Multimodal feature integration.
-- Deep learning model training and evaluation.
-- GPU-accelerated model training.
 
-## Model Architecture
 
-The project explores three major deep learning components:
+\- Document authenticity classification.
 
-### 1. ResNet18
-Used for extracting visual features and classifying documents as authentic or tampered.
+\- Image-based tampering detection.
 
-### 2. U-Net
-Used for image segmentation and localization of potentially manipulated document regions.
+\- Suspicious region localization using U-Net.
 
-### 3. Multimodal Deep Learning Model
-Combines visual and textual information to improve document analysis and authenticity detection.
+\- Document feature extraction using ResNet18.
 
-### 4. OCR Integration
-Tesseract OCR extracts textual information from document images for additional analysis.
+\- OCR-based text extraction using Tesseract.
 
-## Dataset
+\- Multimodal document analysis.
 
-The dataset consists of 1,006 document images.
+\- Visual highlighting of suspicious regions.
 
-| Category | Images |
-|---|---:|
-| Authentic Documents | 503 |
-| Tampered Documents | 503 |
-| Total | 1,006 |
-| Training Set | 804 |
-| Validation Set | 202 |
+\- Forensic analysis reports.
 
-The dataset contains authentic and manipulated document samples for model training and evaluation.
+\- Streamlit-based graphical interface.
 
-## Experimental Results
+\- PDF and image document input support.
 
-The multimodal model achieved the following validation performance:
 
-| Metric | Result |
-|---|---:|
-| Best Validation Accuracy | 89.60% |
-| Training Samples | 804 |
-| Validation Samples | 202 |
 
-*Note: The reported accuracy represents validation accuracy, not independent test-set accuracy.*
+## System Architecture
 
-## Technology Stack
 
-- Python
-- PyTorch
-- Torchvision
-- ResNet18
-- U-Net
-- OpenCV
-- Tesseract OCR
-- NumPy
-- Computer Vision
-- Deep Learning
 
-## Hardware
+The project uses three major analysis components:
 
-Model training was performed using:
 
-- GPU: NVIDIA GeForce RTX 4050 Laptop GPU.
+
+1\. \*\*Visual Analysis:\*\* Uses deep learning to identify visual inconsistencies in document images.
+
+2\. \*\*OCR Analysis:\*\* Extracts document text using Tesseract OCR and supports text-based forensic analysis.
+
+3\. \*\*Layout Analysis:\*\* Examines document structure and spatial information.
+
+
+
+These components are evaluated individually and in combination through an ablation study.
+
+
+
+## Technologies Used
+
+
+
+\- Python
+
+\- PyTorch
+
+\- Torchvision
+
+\- ResNet18
+
+\- U-Net
+
+\- OpenCV
+
+\- NumPy
+
+\- Pandas
+
+\- Tesseract OCR
+
+\- PyMuPDF
+
+\- Scikit-learn
+
+\- Streamlit
+
+
 
 ## Project Structure
 
+
+
 ```text
-AI-Document-Forensics/
-│
-├── src/
-│   ├── classification/
-│   ├── localization/
-│   ├── multimodal/
-│   ├── preprocessing/
-│   └── ocr/
-│
-├── dataset/
-├── checkpoints/
-├── results/
-├── notebooks/
-├── requirements.txt
-├── .gitignore
-└── README.md
+
+AI-Document-Forensics-Tampering-Localization/
+
+â”‚
+
+â”œâ”€â”€ app/
+
+â”‚   â””â”€â”€ app.py
+
+â”‚
+
+â”œâ”€â”€ src/
+
+â”‚   â”œâ”€â”€ models/
+
+â”‚   â”‚   â”œâ”€â”€ multimodal\_dataset.py
+
+â”‚   â”‚   â””â”€â”€ multimodal\_model.py
+
+â”‚   â”œâ”€â”€ forensic\_pipeline.py
+
+â”‚   â”œâ”€â”€ inference.py
+
+â”‚   â”œâ”€â”€ localization.py
+
+â”‚   â”œâ”€â”€ localization\_v2.py
+
+â”‚   â”œâ”€â”€ ocr.py
+
+â”‚   â”œâ”€â”€ train.py
+
+â”‚   â”œâ”€â”€ train\_multimodal.py
+
+â”‚   â””â”€â”€ evaluate\_multimodal.py
+
+â”‚
+
+â”œâ”€â”€ results/
+
+â”‚   â”œâ”€â”€ ablation/
+
+â”‚   â”‚   â””â”€â”€ ablation\_results.txt
+
+â”‚   â”œâ”€â”€ evaluation/
+
+â”‚   â”‚   â””â”€â”€ multimodal\_metrics.txt
+
+â”‚   â””â”€â”€ examples/
+
+â”‚
+
+â”œâ”€â”€ requirements.txt
+
+â”œâ”€â”€ .gitignore
+
+â””â”€â”€ README.md
+
 ```
 
-*This represents the proposed repository organisation. Actual directories and filenames may differ.*
 
-## Applications
 
-Potential applications include:
+## Dataset
 
-- Digital document verification.
-- Invoice manipulation detection.
-- Financial document analysis.
-- Identity document verification.
-- Digital forensic investigations.
 
-## Future Enhancements
 
-- Improve tampering localization accuracy.
-- Evaluate performance on independent datasets.
-- Support additional document formats.
-- Improve robustness against different manipulation techniques.
-- Develop a user-friendly document verification interface.
+The experimental dataset contains:
 
-## Project Status
 
-Research and development project. Model training and initial evaluation have been completed.
+
+| Category | Number of Documents |
+
+|---|---:|
+
+| Authentic | 503 |
+
+| Tampered | 503 |
+
+| Total | 1,006 |
+
+
+
+Dataset split:
+
+
+
+| Split | Documents |
+
+|---|---:|
+
+| Training | 804 |
+
+| Validation | 202 |
+
+
+
+The complete dataset is not included in this repository.
+
+
+
+## Model Evaluation
+
+
+
+The following metrics are recorded in the project's evaluation output:
+
+
+
+| Metric | Result |
+
+|---|---:|
+
+| Accuracy | 90.10% |
+
+| Precision | 98.92% |
+
+| Recall | 82.88% |
+
+| F1-score | 90.20% |
+
+| ROC-AUC | 88.78% |
+
+
+
+These values are from the recorded evaluation metrics file. They should not be interpreted as independent test-set results unless the evaluation split is confirmed to be a held-out test set.
+
+
+
+## Ablation Study
+
+
+
+The project compares different combinations of document features.
+
+
+
+| Configuration | Accuracy |
+
+|---|---:|
+
+| Visual + OCR | 90.10% |
+
+| Visual + Layout | 89.60% |
+
+| Visual + OCR + Layout | 89.11% |
+
+
+
+In this experiment, Visual + OCR achieved the highest accuracy among the evaluated configurations.
+
+
+
+## Installation
+
+
+
+### 1. Clone the repository
+
+
+
+```bash
+
+git clone https://github.com/nandadarshanam1/AI-Document-Forensics-Tampering-Localization.git
+
+cd AI-Document-Forensics-Tampering-Localization
+
+```
+
+
+
+### 2. Create a virtual environment
+
+
+
+```bash
+
+python -m venv venv
+
+```
+
+
+
+Activate it on Windows:
+
+
+
+```powershell
+
+.\\venv\\Scripts\\Activate.ps1
+
+```
+
+
+
+### 3. Install dependencies
+
+
+
+```bash
+
+pip install -r requirements.txt
+
+```
+
+
+
+### 4. Install Tesseract OCR
+
+
+
+Install the Tesseract OCR engine separately. The Python package `pytesseract` does not install the OCR engine itself.
+
+
+
+Configure the Tesseract executable path in the application if it is not automatically detected.
+
+
+
+## Running the Application
+
+
+
+From the repository root, run:
+
+
+
+```bash
+
+streamlit run app/app.py
+
+```
+
+
+
+The Streamlit application should open in your browser.
+
+
+
+\*\*Note:\*\* Model checkpoints and the original dataset are not included in this repository. The application may require trained model weights and the corresponding dataset or configuration files before all analysis features can run.
+
+
+
+## Example Outputs
+
+
+
+Sample outputs are available in:
+
+
+
+```text
+
+results/examples/
+
+```
+
+
+
+These include example predictions, masks, and tampering-highlighted document images.
+
+
+
+## Limitations
+
+
+
+\- Performance depends on the quality and diversity of the training dataset.
+
+\- OCR accuracy can vary with document resolution, font, and image quality.
+
+\- Detection results should be treated as forensic indicators, not definitive proof of document fraud.
+
+\- The reported metrics reflect the recorded experimental evaluation and may not represent real-world performance.
+
+
+
+## Future Improvements
+
+
+
+\- Expand the dataset with more document types and tampering techniques.
+
+\- Improve localization accuracy.
+
+\- Evaluate generalization on independent external datasets.
+
+\- Improve OCR and layout feature fusion.
+
+\- Add more explainability and forensic visualization capabilities.
+
+
 
 ## Author
 
-**Nanda Darshanam**
 
-B.Tech - Computer Science and Engineering (Data Science)
 
-Dayananda Sagar University, Bengaluru.
+\*\*Nanda Darshanam\*\*
+
+
+
+B.Tech, Computer Science and Engineering (Data Science)  
+
+Dayananda Sagar University, Bengaluru
+
+
 
 ## License
 
-This project is licensed under the MIT License.
+
+
+This project is licensed under the MIT License. See the `LICENSE` file for details.
+
+
+
+

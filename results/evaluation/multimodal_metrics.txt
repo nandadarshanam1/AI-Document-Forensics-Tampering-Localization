@@ -1,0 +1,12 @@
+Multimodal Document Forensics
+=============================
+
+Accuracy: 0.9010
+Precision: 0.9892
+Recall: 0.8288
+F1: 0.9020
+ROC-AUC: 0.8878
+
+Confusion Matrix:
+[[90  1]
+ [19 92]]

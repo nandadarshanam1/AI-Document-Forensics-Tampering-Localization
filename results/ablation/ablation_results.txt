@@ -1,0 +1,6 @@
+Document Forensics Ablation Study
+=================================
+
+Visual + OCR: 90.10%
+Visual + Layout: 89.60%
+Visual + OCR + Layout: 89.11%
